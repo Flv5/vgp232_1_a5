@@ -11,7 +11,7 @@ namespace PersistentData
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
-                using (TextWriter writer = new StreamWriter(path))
+                using (StreamWriter writer = new StreamWriter(path))
                 {
                     serializer.Serialize(writer, data);
                 }
@@ -28,7 +28,7 @@ namespace PersistentData
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
-                using (TextReader reader = new StreamReader(path))
+                using (StreamReader reader = new StreamReader(path))
                 {
                     return (T)serializer.Deserialize(reader);
                 }
