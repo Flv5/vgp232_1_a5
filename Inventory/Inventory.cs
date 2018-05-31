@@ -9,6 +9,7 @@ namespace Inventory
     public enum Weapon { Knife, Bow, Axe, Sword, Wand }
     public enum Potion { Health_Full, Health_Standar, Magic_Full, Magic_Standar }
 
+    //Aware of not using Item
     public class Inventory
     {
         List<Weapon> mWeapons;
