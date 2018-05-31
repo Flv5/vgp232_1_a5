@@ -11,20 +11,19 @@ namespace Character
 
     public class Character
     {
-<<<<<<< HEAD
         String mName;
         String mGender; 
         int healthPoints;
-        Race race;
-        Alignment alignment;
-        public Character(int hp, Race r, Alignment a, String name, String gender)
+        Races race;
+        Alignments alignment;
+        public Character(int hp, Races r, Alignments a, String name, String gender)
         {
             mName = name;
             mGender = gender;
             healthPoints = hp;
             race = r;
             alignment = a;
-=======
+        }
         public int HealthPoints
         {
             get; set;
@@ -50,25 +49,16 @@ namespace Character
             HealthPoints = hp;
             Race = r;
             Alignment = a;
->>>>>>> WIP_PersistentData
         }
 
         public void TakeDamage(int damage)
         {
-<<<<<<< HEAD
             healthPoints -= damage;
-=======
-            HealthPoints -= 1;
->>>>>>> WIP_PersistentData
         }
 
         public void RestoreHealth(int amount)
         {
-<<<<<<< HEAD
             healthPoints += amount;
-=======
-            HealthPoints += 1;
->>>>>>> WIP_PersistentData
         }
     }
 }
