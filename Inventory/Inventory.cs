@@ -16,33 +16,20 @@ namespace Inventory
         int mPotionIndex;
         int mWeaponIndex;
 
-<<<<<<< HEAD
         int mMaxWeaponCount;
         int mMaxPotionCount;
-
-        public Inventory(int maxWeaponCount, int maxPotionCount)
-        {
-            mWeapons.Capacity = maxWeaponCount;
-            mPotions.Capacity = maxPotionCount;
-=======
-
         public Inventory(int maxWeaponCount, int maxPotionCount)
         {
             mWeapons = new List<Weapon>(maxWeaponCount);
             mPotions = new List<Potion>(maxPotionCount);
->>>>>>> WIP_Inventory
 
             mPotionIndex = 0;
             mWeaponIndex = 0;
         }
 
-        void InsertPotion(Potion potion)
+        public void InsertPotion(Potion potion)
         {
-<<<<<<< HEAD
-            if (mPotions.Capacity < mMaxPotionCount)
-=======
             if (mPotions.Count < mPotions.Capacity)
->>>>>>> WIP_Inventory
             {
                 mPotions.Insert(mPotionIndex, potion);
                 ++mPotionIndex;
@@ -51,13 +38,9 @@ namespace Inventory
                 Console.WriteLine("Not enough space for potions");
         }
 
-        void InsertWeapon(Weapon weapon)
+        public void InsertWeapon(Weapon weapon)
         {
-<<<<<<< HEAD
-            if (mWeapons.Capacity < mMaxWeaponCount)
-=======
             if (mWeapons.Count < mWeapons.Capacity)
->>>>>>> WIP_Inventory
             {
                 mWeapons.Insert(mWeaponIndex, weapon);
                 ++mWeaponIndex;
@@ -65,20 +48,17 @@ namespace Inventory
             else
                 Console.WriteLine("Not enough space for weapons");
         }
-<<<<<<< HEAD
-=======
 
-        void RemovePotion(Potion potion)
+        public void RemovePotion(Potion potion)
         {
             mPotions.Remove(potion);
             --mPotionIndex;
         }
 
-        void RemoveWeapon(Weapon weapon)
+        public void RemoveWeapon(Weapon weapon)
         {
             mWeapons.Remove(weapon);
             --mWeaponIndex;
         }
->>>>>>> WIP_Inventory
     }
 }
