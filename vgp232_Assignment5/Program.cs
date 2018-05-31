@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Inventory;
 using PersistentData;
 using Character;
-
+using Inventory;
 namespace vgp232_Assignment5
 {
     class Program
@@ -15,6 +15,8 @@ namespace vgp232_Assignment5
         {
             Console.WriteLine("Initializing Systems...");
             // TODO: create inventory system
+            Inventory.Inventory inventory;
+
 
             Console.WriteLine("Initializing Character Manager");
             Character.Character player;
@@ -29,8 +31,8 @@ namespace vgp232_Assignment5
 
             CharacterManager characterManager = CharacterManager.Instance;
             characterManager.Player = player;
-            Character.Character enemyOne = new Character.Character(50, Races.Orc, Alignments.ChaoticEvil);
-            Character.Character enemyTwo = new Character.Character(50, Races.Orc, Alignments.NeutralEvil);
+            Character.Character enemyOne = new Character.Character(50, Races.Orc, Alignments.ChaoticEvil, "1", "masculine");
+            Character.Character enemyTwo = new Character.Character(50, Races.Orc, Alignments.NeutralEvil, "2", "masculine");
             characterManager.AddEnemy(enemyOne);
             characterManager.AddEnemy(enemyTwo);
 
