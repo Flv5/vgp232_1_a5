@@ -30,7 +30,12 @@ namespace PersistentData
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
                 using (StreamReader reader = new StreamReader(path))
                 {
-                    return (T)serializer.Deserialize(reader);
+                    if(Directory.Exists(path))
+                    {
+                        return (T)serializer.Deserialize(reader);
+                    }
+
+                    return default(T);
                 }
             }
             catch (Exception ex)
