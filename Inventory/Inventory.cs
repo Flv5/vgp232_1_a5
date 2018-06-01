@@ -10,7 +10,7 @@ namespace Inventory
     {
         int slots;
         List<Item> items;
-        
+
         public Inventory(int slots)
         {
             items = new List<Item>(slots);
