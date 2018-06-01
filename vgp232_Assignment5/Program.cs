@@ -17,7 +17,6 @@ namespace vgp232_Assignment5
             // TODO: create inventory system
             Inventory.Inventory inventory;
 
-
             Console.WriteLine("Initializing Character Manager");
             Character.Character player;
 
